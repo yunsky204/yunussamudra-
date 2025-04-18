@@ -1,0 +1,143 @@
+body {
+  background: #0a0a0a;
+  color: #00bfff;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #111;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #55ffff;
+}
+
+.identity-box {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: #111;
+  border: 2px solid #00f7ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #003344;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #00f7ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0099cc;
+  color: #fff;
+}
+
+.led-strip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: repeating-linear-gradient(
+    to right,
+    #00f7ff,
+    #00f7ff 10px,
+    #000 10px,
+    #000 20px
+  );
+  animation: moveLED 2s linear infinite;
+}
+
+@keyframes moveLED {
+  from { background-position: 0; }
+  to { background-position: 40px; }
+}
+
+/* Login Page Styles */
+.login-box {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: #111;
+  border: 2px solid #00f7ff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #00bfff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  color: #55ffff;
+}
+
+input {
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #00f7ff;
+  box-shadow: inset 0 0 5px #00f7ff;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.7rem;
+  background: #00f7ff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0099cc;
+  color: #fff;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #55ffff;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
