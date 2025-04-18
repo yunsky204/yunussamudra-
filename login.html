@@ -11,4 +11,46 @@
   
 </body>
 
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login User - Yunus Samudra</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="login-box">
+    <h2>Login User</h2>
+    <form onsubmit="return loginUser(event)">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Masukkan username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Masukkan password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="error-message" style="color:red; text-align:center; margin-top:1rem;"></p>
+  </main>
+
+  <div class="led-strip"></div>
+
+  <script>
+    function loginUser(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const validUsername = "Yunus123";
+      const validPassword = "Yunus123";
+
+      if (username === validUsername && password === validPassword) {
+        window.location.href = "index.html";
+      } else {
+        document.getElementById('error-message').textContent = "Username atau password salah!";
+      }
+    }
+  </script>
+</body>
 </html>
